@@ -1,0 +1,18 @@
+{{ $rating := .rating | default 0 }}
+<div class="star-rating">
+  {{ range seq 5 }}
+    {{ if le . $rating }}
+      ★
+    {{ else }}
+      ☆
+    {{ end }}
+  {{ end }}
+</div>
+
+<style>
+  .star-rating {
+    color: #FFD700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+</style>
