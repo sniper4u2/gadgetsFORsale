@@ -1,0 +1,76 @@
+<div class="tor-gateway">
+  <div class="tor-header">
+    <span class="tor-icon">🧅</span>
+    <span class="tor-title">TOR ACCESS</span>
+  </div>
+  <div class="tor-body">
+    <p>For enhanced privacy, access our Tor hidden service:</p>
+    <div class="tor-address">
+      <input type="text" value="{{ .Site.Params.tor.onion_address }}" id="torAddress" readonly>
+      <button onclick="copyTorAddress()">COPY</button>
+    </div>
+    <p class="tor-warning">⚠️ Always verify the PGP-signed address in our security.txt</p>
+  </div>
+</div>
+
+<script>
+  function copyTorAddress() {
+    const tor = document.getElementById("torAddress");
+    tor.select();
+    document.execCommand("copy");
+    
+    // Show confirmation
+    const btn = document.querySelector(".tor-address button");
+    const originalText = btn.textContent;
+    btn.textContent = "COPIED!";
+    setTimeout(() => {
+      btn.textContent = originalText;
+    }, 2000);
+  }
+</script>
+
+<style>
+  .tor-gateway {
+    background: #000;
+    border: 1px solid #6D27D3;
+    padding: 1rem;
+    margin: 2rem 0;
+    font-family: 'Courier New', monospace;
+  }
+  .tor-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6D27D3;
+    margin-bottom: 1rem;
+  }
+  .tor-title {
+    font-weight: bold;
+  }
+  .tor-body {
+    color: #ddd;
+  }
+  .tor-address {
+    display: flex;
+    margin: 1rem 0;
+  }
+  .tor-address input {
+    flex-grow: 1;
+    background: #111;
+    color: #6D27D3;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    font-family: 'Courier New', monospace;
+  }
+  .tor-address button {
+    background: #6D27D3;
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+  .tor-warning {
+    font-size: 0.8rem;
+    color: #FF851B;
+  }
+</style>

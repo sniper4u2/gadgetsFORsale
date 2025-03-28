@@ -1,11 +1,61 @@
-baseURL = "https://sniper4u2.github.io/gadgetsFORsale/"
+baseURL = "https://sniper4u2.github.io/gadgetsFORsale/"  # Keep your exact URL
 languageCode = "en-us"
-title = "Pentest Hardware Pro"
-theme = "ananke"
+title = "Pentest Hardware Pro"  # Your original title
+theme = "re-terminal"  # Changed from ananke to re-terminal
+pagination.pagerSize = 5
 
 [params]
+  # Your original e-commerce params
   store_name = "Pentest Hardware Pro"
   currency = "USD"
   crypto_wallet = "0xf3fa5c45518e27eb4020c5b31d94f195b37bf808"
   accepted_crypto = ["ETH", "USDT", "USDC", "BTC"]
-  payment_timeout = "30" # minutes
+  payment_timeout = "30"  # minutes
+
+  # re-Terminal theme params
+  contentTypeName = "products"  # Changed from "posts" to match your store
+  themeColor = "orange"  # Retro hacker vibe
+  showMenuItems = 3
+  autoCover = true
+  showLastUpdated = false
+
+  # Add this for crypto payment visibility
+  [params.banner]
+    dismissible = false
+    text = "🟢 We Accept: ETH, USDT, USDC, BTC"
+    url = "#payments"
+
+[languages.en.params]
+  title = "Pentest Hardware Pro"  # Your original title
+  subtitle = "Ethical Hacking Tools & Hardware"  # Custom subtitle
+  owner = ""
+  keywords = "pentest, hardware, cybersecurity, crypto payments"
+  copyright = "© 2024 Pentest Hardware Pro"
+  readMore = "Buy Now"  # E-commerce CTA
+  missingContentMessage = "Product out of stock..."
+
+  [languages.en.params.logo]
+    logoText = "Pentest Hardware Pro"
+    logoHomeLink = "/"
+
+[languages.en.menu]
+  [[languages.en.menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products"
+  [[languages.en.menu.main]]
+    identifier = "crypto"
+    name = "Crypto Payments"
+    url = "#payments"
+  [[languages.en.menu.main]]
+    identifier = "contact"
+    name = "Contact (PGP)"
+    url = "/contact"
+
+[params.tor]
+  enabled = true
+  onion_address = "https://b13tn.pages.dev/"
+
+[params.crypto_ticker]
+  enabled = true
+  refresh_interval = 60

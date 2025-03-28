@@ -1,9 +1,481 @@
-<!doctype html><html><head><meta charset=utf-8><title>USB Rubber Ducky (Gen 2) | Pentest Hardware Pro</title>
-<meta name=viewport content="width=device-width,initial-scale=1"><link rel=preload href=/fonts/Rajdhani-Medium.ttf as=font type=font/ttf crossorigin><link rel=preload href=/fonts/Rajdhani-SemiBold.ttf as=font type=font/ttf crossorigin><style>@font-face{font-family:rajdhani;src:url(/fonts/Rajdhani-Medium.ttf)format('truetype');font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:rajdhani;src:url(/fonts/Rajdhani-SemiBold.ttf)format('truetype');font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:rajdhani;src:url(/fonts/Rajdhani-Bold.ttf)format('truetype');font-weight:700;font-style:normal;font-display:swap}:root{--neon-green:#0f0;--neon-blue:#08f;--neon-pink:#f0f;--matrix-green:#00ff41;--dark-bg:#011;--darker-bg:#001;--text-primary:#e0e0e0;--text-secondary:#aaa}body{font-family:rajdhani,courier new,monospace;font-weight:500;color:var(--text-primary);background-color:var(--darker-bg);margin:0;line-height:1.6;overflow-x:hidden}.neon-text{text-shadow:0 0 5px #fff,0 0 10px var(--neon-green),0 0 20px var(--neon-green)}.neon-blue{text-shadow:0 0 5px #fff,0 0 10px var(--neon-blue),0 0 20px var(--neon-blue)}a{color:var(--neon-green);text-decoration:none;transition:all .3s ease;position:relative}a:hover{color:var(--neon-blue);text-shadow:0 0 10px var(--neon-blue)}a::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:1px;background:var(--neon-green);transform:scaleX(0);transition:transform .3s ease}a:hover::after{transform:scaleX(1)}main{position:relative;z-index:10;background:rgba(0,17,17,.85);backdrop-filter:blur(5px);border:1px solid var(--neon-green);max-width:1200px;margin:2rem auto;padding:2rem;box-shadow:0 0 30px rgba(0,255,0,.1)}@media(max-width:768px){main{margin:1rem;padding:1rem}body{font-size:14px}}@keyframes glitch{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}.glitch{animation:glitch 1s linear infinite}.cyber-btn{display:inline-block;padding:.8rem 1.5rem;background:0 0;color:var(--neon-green);border:2px solid var(--neon-green);font-family:rajdhani,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}.cyber-btn:hover{background:var(--neon-green);color:#000;box-shadow:0 0 15px var(--neon-green)}.cyber-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient( 90deg,transparent,rgba(0,255,0,.2),transparent );transition:.5s}.cyber-btn:hover::before{left:100%}</style><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel=stylesheet onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel=stylesheet></noscript></head><body><div id=matrix-bg></div><style>#matrix-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:#000;overflow:hidden}.matrix-char{position:absolute;color:#0f0;font-family:courier new,monospace;font-size:16px;opacity:0;animation:fall linear infinite}@keyframes fall{to{transform:translateY(100vh)}}</style><script>document.addEventListener("DOMContentLoaded",()=>{const e="01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン",t=document.getElementById("matrix-bg"),n=window.innerWidth,s=Math.floor(n/20);for(let n=0;n<s;n++){const i=Math.random()*5,o=5+Math.random()*10,a=n*20;setInterval(()=>{const n=document.createElement("div");n.className="matrix-char",n.textContent=e[Math.floor(Math.random()*e.length)],n.style.left=`${a}px`,n.style.animationDuration=`${o}s`,n.style.animationDelay=`${i}s`,t.appendChild(n),setTimeout(()=>{n.remove()},o*1e3)},100)}})</script><header class=cyber-header><h1 class=glitch data-text="Pentest Hardware Pro">Pentest Hardware Pro</h1><nav><a href=/ class=cyber-link>[HOME]</a>
-<a href=/products class=cyber-link>[PRODUCTS]</a>
-<span class=cyber-counter id=cart-counter>[CART: 0]</span></nav></header><style>.cyber-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #0f0;margin-bottom:2rem}.cyber-link{margin:0 1rem;text-transform:uppercase;letter-spacing:2px;position:relative}.cyber-link:hover::before{content:'>';position:absolute;left:-15px}.cyber-counter{margin-left:2rem;color:#0f0;font-family:courier new,monospace}</style><script>document.addEventListener("DOMContentLoaded",()=>{const e=JSON.parse(localStorage.getItem("cart"))||[];document.getElementById("cart-counter").textContent=`[CART: ${e.length}]`})</script><main class=cyber-main><div class=product-display><div class=product-visual><img src=/images/rubber-ducky.jpg alt="USB Rubber Ducky (Gen 2)" class=glitch-img><div class=crypto-price><span class=crypto-amount id=eth-price>Calculating...</span>
-<span class=fiat-equivalent>($89 USD)</span></div></div><div class=product-details><h1 class=neon-title>USB Rubber Ducky (Gen 2)</h1><div class=sku-display>[RD-2024]</div><div class=cyber-tabs><button class="tab-btn active" onclick='openTab("details")'>PRODUCT_SPECS</button>
-<button class=tab-btn onclick='openTab("payment")'>CRYPTO_PAY</button></div><div id=details class=tab-content style=display:block><p>Professional keystroke injection tool with:</p><ul><li>Pre-loaded Hak5 payloads</li><li>Cross-platform compatibility (Win/macOS/Linux)</li><li>Silent operation (no LED indicators)</li></ul><button class=cyber-btn onclick=showPayment()>
-[PROCEED_TO_PAYMENT]</button></div><div id=payment class=tab-content><div class=cyber-payment><h3 class=neon>CRYPTO PAYMENT</h3><div class=payment-address><span class=crypto-addr id=wallet-addr>0xf3fa5c45518e27eb4020c5b31d94f195b37bf808</span>
-<button class=copy-btn onclick=copyWallet()>[COPY]</button></div><div class=qrcode-container><div id=qrcode></div><p>Scan for ERC-20 (ETH/USDT/USDC)</p></div><div class=payment-instructions><h4>INSTRUCTIONS:</h4><ol><li>Send exact amount to wallet above</li><li>Include SKU in memo field</li><li>Email receipt to confirm@yourdomain.com</li></ol></div></div><style>.cyber-payment{border:1px solid #0f0;padding:1rem;margin-top:2rem;background:rgba(0,20,0,.3);position:relative;overflow:hidden}.cyber-payment::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient( 45deg,transparent 45%,rgba(0,255,0,.1) 50%,transparent 55% );background-size:3px 3px}.crypto-addr{font-family:courier new,monospace;letter-spacing:1px;background:#111;padding:.5rem;display:inline-block;margin-right:1rem}.copy-btn{background:#000;color:#0f0;border:1px solid #0f0;padding:.25rem .5rem;cursor:pointer;transition:all .3s}.copy-btn:hover{background:#0f0;color:#000}.qrcode-container{margin:1rem 0;text-align:center}#qrcode{width:150px;height:150px;margin:0 auto;border:1px solid #0f0;padding:5px}</style><script src=https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js></script><script>function copyWallet(){navigator.clipboard.writeText("0xf3fa5c45518e27eb4020c5b31d94f195b37bf808"),alert("Wallet address copied!")}document.addEventListener("DOMContentLoaded",function(){new QRCode(document.getElementById("qrcode"),{text:"ethereum:0xf3fa5c45518e27eb4020c5b31d94f195b37bf808",width:150,height:150,colorDark:"#00ff00",colorLight:"#000000",correctLevel:QRCode.CorrectLevel.H})})</script><div class=verification><h4>PAYMENT_VERIFICATION</h4><input type=text placeholder=TX_HASH class=cyber-input>
-<button class=cyber-btn>[VERIFY_PAYMENT]</button></div></div></div></div></main><footer><p>© 2025 Pentest Hardware Pro</p></footer><script>function calculateETH(){const e=89,t=29e-5,n=(e*t).toFixed(6);document.getElementById("eth-price").textContent=`${n} ETH`}document.addEventListener("DOMContentLoaded",function(){calculateETH(),openTab("details")});function openTab(e){document.querySelectorAll(".tab-content").forEach(e=>{e.style.display="none"}),document.querySelectorAll(".tab-btn").forEach(e=>{e.classList.remove("active")}),document.getElementById(e).style.display="block",event.currentTarget.classList.add("active")}function showPayment(){openTab("payment"),window.scrollTo({top:document.getElementById("payment").offsetTop-20,behavior:"smooth"})}</script></body></html>
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+<meta charset="utf-8">
+<title>USB Rubber Ducky (Gen 2) | Pentest Hardware Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="preload" href="/fonts/Rajdhani-Medium.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+
+<style>
+ 
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+ 
+:root {
+  --neon-green: #0f0;
+  --neon-blue: #08f;
+  --neon-pink: #f0f;
+  --matrix-green: #00ff41;
+  --dark-bg: #011;
+  --darker-bg: #001;
+  --text-primary: #e0e0e0;
+  --text-secondary: #aaa;
+}
+
+ 
+body {
+  font-family: 'Rajdhani', 'Courier New', monospace;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: var(--darker-bg);
+  margin: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+ 
+.neon-text {
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px var(--neon-green),
+    0 0 20px var(--neon-green);
+}
+
+.neon-blue {
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px var(--neon-blue),
+    0 0 20px var(--neon-blue);
+}
+
+ 
+a {
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--neon-green);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+ 
+main {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 17, 17, 0.85);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--neon-green);
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+}
+
+ 
+@media (max-width: 768px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+ 
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch {
+  animation: glitch 1s linear infinite;
+}
+
+ 
+.cyber-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  color: var(--neon-green);
+  border: 2px solid var(--neon-green);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn:hover {
+  background: var(--neon-green);
+  color: #000;
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.cyber-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 0, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cyber-btn:hover::before {
+  left: 100%;
+}
+</style>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" onload="this.media='all'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</noscript>
+
+</head>
+<body>
+  <div id="matrix-bg"></div>
+
+<style>
+#matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #000;
+  overflow: hidden;
+}
+
+.matrix-char {
+  position: absolute;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  opacity: 0;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+  const container = document.getElementById('matrix-bg');
+  const width = window.innerWidth;
+  const columns = Math.floor(width / 20);
+  
+  for (let i = 0; i < columns; i++) {
+    const delay = Math.random() * 5;
+    const duration = 5 + Math.random() * 10;
+    const left = i * 20;
+    
+    setInterval(() => {
+      const char = document.createElement('div');
+      char.className = 'matrix-char';
+      char.textContent = chars[Math.floor(Math.random() * chars.length)];
+      char.style.left = `${left}px`;
+      char.style.animationDuration = `${duration}s`;
+      char.style.animationDelay = `${delay}s`;
+      container.appendChild(char);
+      
+      setTimeout(() => {
+        char.remove();
+      }, duration * 1000);
+    }, 100);
+  }
+});
+</script>
+
+  <header class="cyber-header">
+  <h1 class="glitch" data-text="Pentest Hardware Pro">Pentest Hardware Pro</h1>
+  <nav>
+    <a href="/" class="cyber-link">[HOME]</a>
+    <a href="/products" class="cyber-link">[PRODUCTS]</a>
+    <span class="cyber-counter" id="cart-counter">[CART: 0]</span>
+  </nav>
+</header>
+
+<style>
+.cyber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #0f0;
+  margin-bottom: 2rem;
+}
+.cyber-link {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+.cyber-link:hover::before {
+  content: '>';
+  position: absolute;
+  left: -15px;
+}
+.cyber-counter {
+  margin-left: 2rem;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  document.getElementById('cart-counter').textContent = `[CART: ${cart.length}]`;
+});
+</script>
+
+
+  <main class="cyber-main">
+    <div class="product-display">
+      <div class="product-visual">
+        <img src="/images/rubber-ducky.jpg" alt="USB Rubber Ducky (Gen 2)" class="glitch-img">
+        <div class="crypto-price">
+          <span class="crypto-amount" id="eth-price">Calculating...</span>
+          <span class="fiat-equivalent">($89 USD)</span>
+        </div>
+      </div>
+      
+      <div class="product-details">
+        <h1 class="neon-title">USB Rubber Ducky (Gen 2)</h1>
+        <div class="sku-display">[RD-2024]</div>
+        
+        <div class="cyber-tabs">
+          <button class="tab-btn active" onclick="openTab('details')">PRODUCT_SPECS</button>
+          <button class="tab-btn" onclick="openTab('payment')">CRYPTO_PAY</button>
+        </div>
+        
+        <div id="details" class="tab-content" style="display:block;">
+          <p>Professional keystroke injection tool with:</p>
+<ul>
+<li>Pre-loaded Hak5 payloads</li>
+<li>Cross-platform compatibility (Win/macOS/Linux)</li>
+<li>Silent operation (no LED indicators)</li>
+</ul>
+
+          <button class="cyber-btn" onclick="showPayment()">
+            [PROCEED_TO_PAYMENT]
+          </button>
+        </div>
+        
+        <div id="payment" class="tab-content">
+          <div class="cyber-payment">
+  <h3 class="neon">CRYPTO PAYMENT</h3>
+  
+  <div class="payment-address">
+    <span class="crypto-addr" id="wallet-addr">0xf3fa5c45518e27eb4020c5b31d94f195b37bf808</span>
+    <button class="copy-btn" onclick="copyWallet()">[COPY]</button>
+  </div>
+
+  <div class="qrcode-container">
+    <div id="qrcode"></div>
+    <p>Scan for ERC-20 (ETH/USDT/USDC)</p>
+  </div>
+
+  <div class="payment-instructions">
+    <h4>INSTRUCTIONS:</h4>
+    <ol>
+      <li>Send exact amount to wallet above</li>
+      <li>Include SKU in memo field</li>
+      <li>Email receipt to confirm@yourdomain.com</li>
+    </ol>
+  </div>
+</div>
+
+<style>
+.cyber-payment {
+  border: 1px solid #0f0;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: rgba(0,20,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.cyber-payment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(0,255,0,0.1) 50%,
+    transparent 55%
+  );
+  background-size: 3px 3px;
+}
+.crypto-addr {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  background: #111;
+  padding: 0.5rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.copy-btn {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.copy-btn:hover {
+  background: #0f0;
+  color: #000;
+}
+.qrcode-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+#qrcode {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid #0f0;
+  padding: 5px;
+}
+</style>
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script>
+function copyWallet() {
+  navigator.clipboard.writeText("0xf3fa5c45518e27eb4020c5b31d94f195b37bf808");
+  alert("Wallet address copied!");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  new QRCode(document.getElementById("qrcode"), {
+    text: "ethereum:0xf3fa5c45518e27eb4020c5b31d94f195b37bf808",
+    width: 150,
+    height: 150,
+    colorDark : "#00ff00",
+    colorLight : "#000000",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+});
+</script>
+
+          <div class="verification">
+            <h4>PAYMENT_VERIFICATION</h4>
+            <input type="text" placeholder="TX_HASH" class="cyber-input">
+            <button class="cyber-btn">[VERIFY_PAYMENT]</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <p>© 2025 Pentest Hardware Pro</p>
+</footer>
+
+
+  <script>
+  
+  function calculateETH() {
+    const usdPrice =  89 ;
+    
+    const ethRate = 0.00029; 
+    const ethPrice = (usdPrice * ethRate).toFixed(6);
+    document.getElementById('eth-price').textContent = `${ethPrice} ETH`;
+  }
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateETH();
+    openTab('details');
+  });
+
+  function openTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+    });
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.getElementById(tabName).style.display = 'block';
+    event.currentTarget.classList.add('active');
+  }
+
+  function showPayment() {
+    openTab('payment');
+    window.scrollTo({
+      top: document.getElementById('payment').offsetTop - 20,
+      behavior: 'smooth'
+    });
+  }
+  </script>
+</body>
+</html>
