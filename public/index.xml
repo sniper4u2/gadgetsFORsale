@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pentest Hardware Pro</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Pentest Hardware Pro</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Mar 2025 20:50:42 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>USB Rubber Ducky (Gen 2)</title>
+      <link>http://localhost:1313/products/rubber-ducky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/rubber-ducky/</guid>
+      <description>Professional keystroke injection tool with:&#xA;Pre-loaded Hak5 payloads Cross-platform compatibility (Win/macOS/Linux) Silent operation (no LED indicators) </description>
+    </item>
+    <item>
+      <title>Flipper Zero</title>
+      <link>http://localhost:1313/products/flipper-zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/flipper-zero/</guid>
+      <description>The ultimate pentesting tool with multi-protocol support.</description>
+    </item>
+    <item>
+      <title>Proxmark3 RDV4 Complete Kit</title>
+      <link>http://localhost:1313/products/proxmark3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/proxmark3/</guid>
+      <description>Industry-standard RFID research tool with:&#xA;Firmware: Iceman fork (latest) Range: Up to 10cm (varies by tag) Compatibility: Windows/Linux/macOS Warranty: 1 year (parts/labor) </description>
+    </item>
+    <item>
+      <title>New Product</title>
+      <link>http://localhost:1313/products/new-product/</link>
+      <pubDate>Thu, 27 Mar 2025 20:50:42 -0400</pubDate>
+      <guid>http://localhost:1313/products/new-product/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

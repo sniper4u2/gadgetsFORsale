@@ -1,0 +1,11 @@
+baseURL = "https://urstore.tn"
+languageCode = "en-us"
+title = "Pentest Hardware Pro"
+theme = "ananke"
+
+[params]
+  store_name = "Pentest Hardware Pro"
+  currency = "USD"
+  crypto_wallet = "0xf3fa5c45518e27eb4020c5b31d94f195b37bf808"
+  accepted_crypto = ["ETH", "USDT", "USDC", "BTC"]
+  payment_timeout = "30" # minutes

@@ -1,0 +1,98 @@
+<div class="cyber-payment">
+  <h3 class="neon">CRYPTO PAYMENT</h3>
+  
+  <div class="payment-address">
+    <span class="crypto-addr" id="wallet-addr">0xf3fa5c45518e27eb4020c5b31d94f195b37bf808</span>
+    <button class="copy-btn" onclick="copyWallet()">[COPY]</button>
+  </div>
+
+  <div class="qrcode-container">
+    <div id="qrcode"></div>
+    <p>Scan for ERC-20 (ETH/USDT/USDC)</p>
+  </div>
+
+  <div class="payment-instructions">
+    <h4>INSTRUCTIONS:</h4>
+    <ol>
+      <li>Send exact amount to wallet above</li>
+      <li>Include SKU in memo field</li>
+      <li>Email receipt to confirm@yourdomain.com</li>
+    </ol>
+  </div>
+</div>
+
+<style>
+.cyber-payment {
+  border: 1px solid #0f0;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: rgba(0,20,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.cyber-payment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(0,255,0,0.1) 50%,
+    transparent 55%
+  );
+  background-size: 3px 3px;
+}
+.crypto-addr {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  background: #111;
+  padding: 0.5rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.copy-btn {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.copy-btn:hover {
+  background: #0f0;
+  color: #000;
+}
+.qrcode-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+#qrcode {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid #0f0;
+  padding: 5px;
+}
+</style>
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script>
+function copyWallet() {
+  navigator.clipboard.writeText("0xf3fa5c45518e27eb4020c5b31d94f195b37bf808");
+  alert("Wallet address copied!");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  new QRCode(document.getElementById("qrcode"), {
+    text: "ethereum:0xf3fa5c45518e27eb4020c5b31d94f195b37bf808",
+    width: 150,
+    height: 150,
+    colorDark : "#00ff00",
+    colorLight : "#000000",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+});
+</script>

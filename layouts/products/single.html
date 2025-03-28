@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "matrix-bg.html" }}
+  {{ partial "header.html" . }}
+
+  <main class="cyber-main">
+    <div class="product-display">
+      <div class="product-visual">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="glitch-img">
+        <div class="crypto-price">
+          <span class="crypto-amount" id="eth-price">Calculating...</span>
+          <span class="fiat-equivalent">(${{ .Params.price }} USD)</span>
+        </div>
+      </div>
+      
+      <div class="product-details">
+        <h1 class="neon-title">{{ .Title }}</h1>
+        <div class="sku-display">[{{ .Params.sku }}]</div>
+        
+        <div class="cyber-tabs">
+          <button class="tab-btn active" onclick="openTab('details')">PRODUCT_SPECS</button>
+          <button class="tab-btn" onclick="openTab('payment')">CRYPTO_PAY</button>
+        </div>
+        
+        <div id="details" class="tab-content" style="display:block;">
+          {{ .Content }}
+          <button class="cyber-btn" onclick="showPayment()">
+            [PROCEED_TO_PAYMENT]
+          </button>
+        </div>
+        
+        <div id="payment" class="tab-content">
+          {{ partial "crypto-payment.html" . }}
+          <div class="verification">
+            <h4>PAYMENT_VERIFICATION</h4>
+            <input type="text" placeholder="TX_HASH" class="cyber-input">
+            <button class="cyber-btn">[VERIFY_PAYMENT]</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <script>
+  // Real-time ETH price calculation
+  function calculateETH() {
+    const usdPrice = {{ .Params.price }};
+    // Using fixed conversion rate (replace with API call in production)
+    const ethRate = 0.00029; // 1 USD = 0.00029 ETH
+    const ethPrice = (usdPrice * ethRate).toFixed(6);
+    document.getElementById('eth-price').textContent = `${ethPrice} ETH`;
+  }
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateETH();
+    openTab('details');
+  });
+
+  function openTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+    });
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.getElementById(tabName).style.display = 'block';
+    event.currentTarget.classList.add('active');
+  }
+
+  function showPayment() {
+    openTab('payment');
+    window.scrollTo({
+      top: document.getElementById('payment').offsetTop - 20,
+      behavior: 'smooth'
+    });
+  }
+  </script>
+</body>
+</html>

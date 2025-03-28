@@ -1,0 +1,16 @@
+<div class="product">
+  <img src="{{ .Get "image" }}" alt="{{ .Get "name" }}">
+  <h3>{{ .Get "name" }}</h3>
+  <p>${{ .Get "price" }}</p>
+  <button onclick="addToCart('{{ .Get "sku" }}')">Add to Cart</button>
+</div>
+
+<style>
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 300px;
+  float: left;
+}
+</style>

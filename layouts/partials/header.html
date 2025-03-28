@@ -1,0 +1,42 @@
+<header class="cyber-header">
+  <h1 class="glitch" data-text="{{ .Site.Title }}">{{ .Site.Title }}</h1>
+  <nav>
+    <a href="/" class="cyber-link">[HOME]</a>
+    <a href="/products" class="cyber-link">[PRODUCTS]</a>
+    <span class="cyber-counter" id="cart-counter">[CART: 0]</span>
+  </nav>
+</header>
+
+<style>
+.cyber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #0f0;
+  margin-bottom: 2rem;
+}
+.cyber-link {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+.cyber-link:hover::before {
+  content: '>';
+  position: absolute;
+  left: -15px;
+}
+.cyber-counter {
+  margin-left: 2rem;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  document.getElementById('cart-counter').textContent = `[CART: ${cart.length}]`;
+});
+</script>

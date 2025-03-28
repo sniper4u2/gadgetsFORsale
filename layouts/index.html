@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "cyber-bg.html" }}
+  {{ partial "header.html" . }}
+
+  <main>
+    <section class="hero">
+      <h1 class="neon-text">PENTEST HARDWARE <span>PRO</span></h1>
+      <p class="tagline">Cutting-edge tools for security researchers</p>
+      <a href="/products" class="cta-button">ENTER STORE</a>
+    </section>
+
+    <section class="featured-products">
+      <h2>FLAGSHIP PRODUCTS</h2>
+      <div class="product-grid">
+        {{ range first 3 (where .Site.RegularPages "Section" "products") }}
+        <div class="product-card">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          <h3>{{ .Title }}</h3>
+          <p>${{ .Params.price }}</p>
+          <a href="{{ .RelPermalink }}" class="product-link">VIEW DETAILS</a>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="holographic-banner">
+      <div class="banner-content">
+        <h2>CRYPTO PAYMENTS ACCEPTED</h2>
+        <p>ETH · BTC · USDT · USDC</p>
+        <div class="crypto-logos">
+          <img src="/images/eth-logo.png" alt="Ethereum">
+          <img src="/images/btc-logo.png" alt="Bitcoin">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <style>
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .hero h1 span {
+    color: var(--neon-green);
+  }
+  .tagline {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--neon-green);
+    border: 2px solid var(--neon-green);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+  }
+  .cta-button:hover {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-green);
+  }
+  .featured-products {
+    margin: 4rem 0;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .product-card {
+    background: rgba(0, 34, 34, 0.7);
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    text-align: center;
+  }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .product-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--neon-blue);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--neon-blue);
+  }
+  .holographic-banner {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 50, 50, 0.7),
+      rgba(0, 20, 50, 0.7)
+    );
+    border-left: 3px solid var(--neon-blue);
+    border-right: 3px solid var(--neon-pink);
+    text-align: center;
+  }
+  .crypto-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .crypto-logos img {
+    height: 40px;
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
+  .crypto-logos img:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  </style>
+</body>
+</html>
